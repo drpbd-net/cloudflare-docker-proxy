@@ -4,10 +4,12 @@ addEventListener("fetch", (event) => {
 });
 
 const dockerHub = "https://registry-1.docker.io";
+const dockerHubIndex = "https://index.docker.io";
 
 const routes = {
   // production
   ["docker.m." + CUSTOM_DOMAIN]: dockerHub,
+  ["docker-index.m." + CUSTOM_DOMAIN]: dockerHubIndex,
   ["quay.m." + CUSTOM_DOMAIN]: "https://quay.io",
   ["gcr.m." + CUSTOM_DOMAIN]: "https://gcr.io",
   ["k8s-gcr.m." + CUSTOM_DOMAIN]: "https://k8s.gcr.io",
@@ -18,6 +20,7 @@ const routes = {
 
   // production
   ["docker." + CUSTOM_DOMAIN]: dockerHub,
+  ["docker-index." + CUSTOM_DOMAIN]: dockerHubIndex,
   ["quay." + CUSTOM_DOMAIN]: "https://quay.io",
   ["gcr." + CUSTOM_DOMAIN]: "https://gcr.io",
   ["k8s-gcr." + CUSTOM_DOMAIN]: "https://k8s.gcr.io",
@@ -28,6 +31,7 @@ const routes = {
   
   // staging
   ["docker-staging." + CUSTOM_DOMAIN]: dockerHub,
+  ["docker-staging-index." + CUSTOM_DOMAIN]: dockerHubIndex,
 };
 
 function routeByHosts(host) {

@@ -9,6 +9,7 @@ local_protocol = "http"
 
 [env.vars]
 CUSTOM_DOMAIN = "bodanetworks.us.kg"
+CUSTOM_DOMAIN_2 = "drcloud.com.cn"
 
 [env.dev.vars]
 MODE = "debug"
@@ -33,6 +34,14 @@ name = "cloudflare-docker-proxy"
      { pattern = "ghcr.bodanetworks.us.kg", custom_domain = true },
      { pattern = "cloudsmith.bodanetworks.us.kg", custom_domain = true },
      { pattern = "ecr.bodanetworks.us.kg", custom_domain = true },
+     { pattern = "docker.drcloud.com.cn", custom_domain = true },
+     { pattern = "quay.drcloud.com.cn", custom_domain = true },
+     { pattern = "gcr.drcloud.com.cn", custom_domain = true },
+     { pattern = "k8s-gcr.drcloud.com.cn", custom_domain = true },
+     { pattern = "k8s.drcloud.com.cn", custom_domain = true },
+     { pattern = "ghcr.drcloud.com.cn", custom_domain = true },
+     { pattern = "cloudsmith.drcloud.com.cn", custom_domain = true },
+     { pattern = "ecr.drcloud.com.cn", custom_domain = true },
  ]
 
 [env.production.vars]
